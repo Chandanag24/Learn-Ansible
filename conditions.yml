@@ -1,11 +1,16 @@
 - name: Practicing on Ansible
   hosts: all
   connection: local
+  vars:
+    fruits: true
+    vegetables: false
   tasks:
     - name: Print Vegetable Names
       ansible.builtin.debug:
         msg: Vegetable-Carrot
+      when: fruits is true
 
     - name: Print Fruit Names
       ansible.builtin.debug:
         msg: Fruit-Mango
+      when: vegetables is true
