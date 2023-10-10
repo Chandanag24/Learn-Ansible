@@ -1,0 +1,10 @@
+- name: Practicing on Ansible
+  hosts: all
+  tasks:
+    - name: Print Vegetable Names
+      ansible.builtin.debug:
+        msg: Vegetable-Carrot
+
+    - name: Print Fruit Names
+      ansible.builtin.debug:
+        msg: Fruit-Mango
