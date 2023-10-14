@@ -1,0 +1,12 @@
+- name: Variable Types
+  hosts: localhost
+  connection: local
+  vars:
+    emp_name: chandana #string
+    emp_id: 123 #number
+    female: true #boolean
+  tasks:
+    - name: Print
+      ansible.builtin.debug:
+        msg: Emp Name - {{ emp_name }}, Emp ID - {{ emp_id }}
+      when: female
