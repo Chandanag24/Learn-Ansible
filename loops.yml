@@ -1,0 +1,19 @@
+- name: Loops Concept
+  hosts: all
+  connection: localhost
+  vars:
+    cakes:
+      - choclate
+      - redvelvet
+  tasks:
+    - name: Print Cakes
+      ansible.builtin.debug:
+        msg: Cake Names - "{{ item }}
+      loop: "{{ cakes }}"
+
+    - name: Print Cakes Local values
+      ansible.builtin.debug:
+        msg: Cake Names - "{{ item }}
+      loop:
+        - pancake
+        - lava choclate
