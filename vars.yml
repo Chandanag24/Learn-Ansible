@@ -1,6 +1,6 @@
 - name: Variable
   hosts: localhost
-  connetion: local
+  connection: local
   vars:
     URL: play.google.com
   tasks:
