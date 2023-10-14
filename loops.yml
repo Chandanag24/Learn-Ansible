@@ -1,6 +1,6 @@
 - name: Loops Concept
-  hosts: all
-  connection: localhost
+  hosts: localhost
+  connection: local
   vars:
     cakes:
       - choclate
