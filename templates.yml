@@ -1,0 +1,9 @@
+- name: Template Practice
+  hosts: localhost
+  connection: local
+  vars:
+    emp_name: chandana
+  tasks:
+    - ansible.builtin.template:
+        src: test.txt
+        dest: /tmp/test.txt
